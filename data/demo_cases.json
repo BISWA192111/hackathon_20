@@ -1,0 +1,10 @@
+{
+  "technical": {
+    "resume": "Senior analyst with 5+ years of experience building Python automation, SQL reporting, and API integrations. Hands-on Git workflow, testing, dashboarding in Excel, Linux command line, and cloud access hygiene. Led documentation improvements and collaborated with engineering, product, and operations teams.",
+    "jd": "We are hiring a data and automation specialist. Must have Python, SQL, API integration, Git, and testing experience. Strong documentation, stakeholder communication, and cloud security hygiene are required. Experience with Linux command line and reporting dashboards is preferred."
+  },
+  "operations": {
+    "resume": "Operations associate with 4 years of experience in SOP execution, equipment handling, safety checks, inventory control, shift handovers, and incident reporting. Strong customer communication and quality control.",
+    "jd": "Seeking an operations coordinator with strong safety discipline, SOP compliance, quality control, inventory management, shift handover skills, and customer escalation handling. Documentation and continuous improvement mindset are essential."
+  }
+}

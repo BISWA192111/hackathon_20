@@ -1,0 +1,210 @@
+{
+  "skills": [
+    {"skill_id": "communication", "label": "Communication", "category": "general", "aliases": ["stakeholder communication", "written communication", "verbal communication", "presentation"]},
+    {"skill_id": "documentation", "label": "Documentation", "category": "general", "aliases": ["technical writing", "process documentation", "report writing", "sop documentation"]},
+    {"skill_id": "collaboration", "label": "Collaboration", "category": "general", "aliases": ["teamwork", "cross functional collaboration", "stakeholder management"]},
+    {"skill_id": "problem_solving", "label": "Problem Solving", "category": "general", "aliases": ["root cause analysis", "troubleshooting", "analytical thinking"]},
+    {"skill_id": "time_management", "label": "Time Management", "category": "general", "aliases": ["prioritization", "planning", "deadline management"]},
+    {"skill_id": "python", "label": "Python", "category": "technical", "aliases": ["python programming", "python3", "py"]},
+    {"skill_id": "sql", "label": "SQL", "category": "technical", "aliases": ["structured query language", "database queries", "query writing"]},
+    {"skill_id": "excel", "label": "Excel", "category": "technical", "aliases": ["spreadsheet", "spreadsheets", "advanced excel", "pivot tables"]},
+    {"skill_id": "git", "label": "Git", "category": "technical", "aliases": ["version control", "github", "git workflow"]},
+    {"skill_id": "testing", "label": "Testing", "category": "technical", "aliases": ["unit testing", "test cases", "qa testing", "quality gates"]},
+    {"skill_id": "api_integration", "label": "API Integration", "category": "technical", "aliases": ["rest api", "api", "integration patterns", "webhook"]},
+    {"skill_id": "linux", "label": "Linux", "category": "technical", "aliases": ["command line", "shell", "bash", "unix"]},
+    {"skill_id": "cloud_basics", "label": "Cloud Basics", "category": "technical", "aliases": ["aws", "azure", "gcp", "cloud computing"]},
+    {"skill_id": "security_basics", "label": "Security Basics", "category": "technical", "aliases": ["access control", "secure coding", "security hygiene", "least privilege"]},
+    {"skill_id": "data_analysis", "label": "Data Analysis", "category": "technical", "aliases": ["analytics", "reporting", "dashboards", "data interpretation"]},
+    {"skill_id": "process_compliance", "label": "Process Compliance", "category": "operations", "aliases": ["sop", "standard operating procedure", "policy compliance", "audit readiness"]},
+    {"skill_id": "safety", "label": "Safety", "category": "operations", "aliases": ["workplace safety", "health and safety", "incident prevention"]},
+    {"skill_id": "equipment_handling", "label": "Equipment Handling", "category": "operations", "aliases": ["machinery", "tool handling", "preventive checks", "equipment operation"]},
+    {"skill_id": "quality_control", "label": "Quality Control", "category": "operations", "aliases": ["inspection", "defect detection", "qa inspection", "quality assurance"]},
+    {"skill_id": "inventory_management", "label": "Inventory Management", "category": "operations", "aliases": ["stock control", "stock management", "materials tracking"]},
+    {"skill_id": "shift_handover", "label": "Shift Handover", "category": "operations", "aliases": ["handover", "shift report", "transition notes"]},
+    {"skill_id": "customer_service", "label": "Customer Service", "category": "operations", "aliases": ["customer support", "escalation handling", "service recovery"]},
+    {"skill_id": "incident_reporting", "label": "Incident Reporting", "category": "operations", "aliases": ["issue logging", "escalation reporting", "incident log"]},
+    {"skill_id": "continuous_improvement", "label": "Continuous Improvement", "category": "operations", "aliases": ["kaizen", "process improvement", "lean thinking"]}
+  ],
+  "modules": [
+    {
+      "module_id": "M001",
+      "title": "Team Orientation and Success Criteria",
+      "description": "Introduce the operating model, team norms, documentation expectations, and how performance is measured in the role.",
+      "skills": ["communication", "documentation", "collaboration"],
+      "prerequisites": [],
+      "duration_hours": 2.0,
+      "difficulty": 1,
+      "audience_tags": ["general", "technical", "operations"]
+    },
+    {
+      "module_id": "M010",
+      "title": "Prioritization, Planning, and Work Management",
+      "description": "Build a repeatable method for time management, task sequencing, and clear handoffs under deadline pressure.",
+      "skills": ["time_management", "communication", "problem_solving"],
+      "prerequisites": [],
+      "duration_hours": 2.5,
+      "difficulty": 1,
+      "audience_tags": ["general", "technical", "operations"]
+    },
+    {
+      "module_id": "M101",
+      "title": "Version Control and Workspace Setup",
+      "description": "Set up the workspace, Git workflow, repository hygiene, branching, and collaboration basics.",
+      "skills": ["git", "linux", "collaboration"],
+      "prerequisites": ["M001"],
+      "duration_hours": 3.0,
+      "difficulty": 2,
+      "audience_tags": ["technical"]
+    },
+    {
+      "module_id": "M102",
+      "title": "Python Foundations for Automation",
+      "description": "Develop working fluency with Python, data structures, scripts, and basic automation patterns.",
+      "skills": ["python", "problem_solving"],
+      "prerequisites": ["M101"],
+      "duration_hours": 4.0,
+      "difficulty": 2,
+      "audience_tags": ["technical"]
+    },
+    {
+      "module_id": "M103",
+      "title": "SQL and Data Retrieval",
+      "description": "Query structured data with SQL, join tables, and extract analysis-ready datasets.",
+      "skills": ["sql", "data_analysis"],
+      "prerequisites": ["M101"],
+      "duration_hours": 3.5,
+      "difficulty": 2,
+      "audience_tags": ["technical"]
+    },
+    {
+      "module_id": "M104",
+      "title": "Testing and Quality Gates",
+      "description": "Create reliable unit tests, validate logic paths, and establish a practical quality bar.",
+      "skills": ["testing", "documentation", "problem_solving"],
+      "prerequisites": ["M102"],
+      "duration_hours": 3.0,
+      "difficulty": 3,
+      "audience_tags": ["technical"]
+    },
+    {
+      "module_id": "M105",
+      "title": "API Integration Patterns",
+      "description": "Work with REST APIs, payload validation, authentication flow basics, and integration troubleshooting.",
+      "skills": ["api_integration", "security_basics", "problem_solving"],
+      "prerequisites": ["M102", "M101"],
+      "duration_hours": 3.5,
+      "difficulty": 3,
+      "audience_tags": ["technical"]
+    },
+    {
+      "module_id": "M106",
+      "title": "Cloud and Security Hygiene",
+      "description": "Cover cloud basics, access management, secure defaults, and safe handling of work credentials.",
+      "skills": ["cloud_basics", "security_basics", "linux"],
+      "prerequisites": ["M101"],
+      "duration_hours": 3.0,
+      "difficulty": 2,
+      "audience_tags": ["technical"]
+    },
+    {
+      "module_id": "M107",
+      "title": "Data Analysis and Reporting",
+      "description": "Use Excel and reporting techniques to summarize outcomes and communicate findings clearly.",
+      "skills": ["excel", "data_analysis", "documentation"],
+      "prerequisites": ["M001"],
+      "duration_hours": 3.0,
+      "difficulty": 2,
+      "audience_tags": ["technical", "operations"]
+    },
+    {
+      "module_id": "M201",
+      "title": "Safety, Compliance, and SOP Execution",
+      "description": "Teach policy adherence, safety expectations, operational discipline, and standard operating procedure execution.",
+      "skills": ["safety", "process_compliance", "incident_reporting"],
+      "prerequisites": ["M001"],
+      "duration_hours": 3.0,
+      "difficulty": 1,
+      "audience_tags": ["operations"]
+    },
+    {
+      "module_id": "M202",
+      "title": "Equipment Handling and Preventive Checks",
+      "description": "Demonstrate safe equipment operation, checklists, calibration mindset, and preventable fault identification.",
+      "skills": ["equipment_handling", "safety", "problem_solving"],
+      "prerequisites": ["M201"],
+      "duration_hours": 3.5,
+      "difficulty": 2,
+      "audience_tags": ["operations"]
+    },
+    {
+      "module_id": "M203",
+      "title": "Quality Control and Root Cause Thinking",
+      "description": "Inspect outputs, classify defects, and trace issues back to their source with practical root cause logic.",
+      "skills": ["quality_control", "problem_solving", "documentation"],
+      "prerequisites": ["M201"],
+      "duration_hours": 3.0,
+      "difficulty": 2,
+      "audience_tags": ["operations"]
+    },
+    {
+      "module_id": "M204",
+      "title": "Inventory, Shift Handover, and Scheduling",
+      "description": "Manage inventory flow, shift-to-shift communication, attendance-aware planning, and handover discipline.",
+      "skills": ["inventory_management", "shift_handover", "time_management"],
+      "prerequisites": ["M201"],
+      "duration_hours": 2.5,
+      "difficulty": 2,
+      "audience_tags": ["operations"]
+    },
+    {
+      "module_id": "M205",
+      "title": "Customer Escalation and Service Communication",
+      "description": "Handle customer issues, communicate calmly under pressure, document outcomes, and close the loop professionally.",
+      "skills": ["customer_service", "communication", "documentation"],
+      "prerequisites": ["M001"],
+      "duration_hours": 2.5,
+      "difficulty": 2,
+      "audience_tags": ["operations", "general"]
+    },
+    {
+      "module_id": "M301",
+      "title": "Continuous Improvement and Process Optimization",
+      "description": "Apply a lean mindset to reduce friction, simplify steps, and document measurable process improvements.",
+      "skills": ["continuous_improvement", "problem_solving", "documentation"],
+      "prerequisites": ["M010"],
+      "duration_hours": 3.5,
+      "difficulty": 3,
+      "audience_tags": ["technical", "operations"]
+    },
+    {
+      "module_id": "M402",
+      "title": "Technical Capstone and Competency Validation",
+      "description": "Run a role simulation for technical hires with practical tasks, verification checks, and a sign-off rubric.",
+      "skills": ["python", "sql", "testing", "api_integration", "documentation"],
+      "prerequisites": ["M104", "M105"],
+      "duration_hours": 4.0,
+      "difficulty": 4,
+      "audience_tags": ["technical"]
+    },
+    {
+      "module_id": "M403",
+      "title": "Operational Capstone and Competency Validation",
+      "description": "Run an operational simulation covering SOP execution, safety, quality checks, and escalation response.",
+      "skills": ["safety", "quality_control", "customer_service", "incident_reporting", "documentation"],
+      "prerequisites": ["M201", "M203", "M205"],
+      "duration_hours": 4.0,
+      "difficulty": 4,
+      "audience_tags": ["operations"]
+    },
+    {
+      "module_id": "M404",
+      "title": "General Capstone and Competency Validation",
+      "description": "Validate baseline onboarding skills for cross-functional hires using communication, planning, and documentation scenarios.",
+      "skills": ["communication", "documentation", "problem_solving", "time_management"],
+      "prerequisites": ["M001", "M010"],
+      "duration_hours": 3.5,
+      "difficulty": 3,
+      "audience_tags": ["general"]
+    }
+  ]
+}

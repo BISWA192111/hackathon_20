@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adaptive Onboarding Engine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="bg-orb orb-1"></div>
+  <div class="bg-orb orb-2"></div>
+  <div class="bg-grid"></div>
+
+  <main class="container">
+    <header class="hero reveal">
+      <p class="eyebrow">Hackathon Build</p>
+      <h1>AI-Adaptive Onboarding Engine</h1>
+      <p class="hero-copy">
+        Upload a resume and target JD, optionally add diagnostic self-assessment, and get a grounded personalized roadmap.
+      </p>
+      <div class="hero-actions">
+        <button id="load-tech" class="btn ghost">Load Technical Demo</button>
+        <button id="load-ops" class="btn ghost">Load Operations Demo</button>
+      </div>
+    </header>
+
+    <section class="panel reveal">
+      <h2>Input Workspace</h2>
+      <div class="input-grid">
+        <div class="field">
+          <label for="resume-text">Resume Text</label>
+          <textarea id="resume-text" placeholder="Paste resume text, or upload a file below"></textarea>
+        </div>
+        <div class="field">
+          <label for="jd-text">Job Description Text</label>
+          <textarea id="jd-text" placeholder="Paste target job description, or upload a file below"></textarea>
+        </div>
+      </div>
+
+      <div class="file-grid">
+        <div class="field compact">
+          <label for="resume-file">Resume File (PDF, DOCX, TXT)</label>
+          <input id="resume-file" type="file" accept=".pdf,.docx,.txt">
+        </div>
+        <div class="field compact">
+          <label for="jd-file">JD File (PDF, DOCX, TXT)</label>
+          <input id="jd-file" type="file" accept=".pdf,.docx,.txt">
+        </div>
+      </div>
+
+      <div class="diagnostic-block">
+        <div class="diagnostic-header">
+          <h3>Diagnostic Self-Assessment</h3>
+          <button id="add-diagnostic" class="btn mini">Add Skill</button>
+        </div>
+        <p class="muted">Use this when resume evidence is sparse; ratings blend into the candidate profile.</p>
+        <div id="diagnostic-rows" class="diagnostic-rows"></div>
+      </div>
+
+      <div class="action-row">
+        <button id="analyze-btn" class="btn primary">Generate Adaptive Roadmap</button>
+        <span id="status" class="status"></span>
+      </div>
+    </section>
+
+    <section class="panel reveal" id="results-section">
+      <div class="panel-head">
+        <h2>Analysis Output</h2>
+        <span id="family-pill" class="pill">Role: -</span>
+      </div>
+      <div id="metrics" class="metrics"></div>
+
+      <div class="result-grid">
+        <div class="card">
+          <h3>Skill Gaps</h3>
+          <div id="gap-table"></div>
+        </div>
+        <div class="card">
+          <h3>Learning Roadmap</h3>
+          <div id="roadmap-list"></div>
+        </div>
+      </div>
+
+      <div class="result-grid">
+        <div class="card">
+          <h3>Reasoning Trace</h3>
+          <div id="trace-list"></div>
+        </div>
+        <div class="card">
+          <h3>Grounding Checks</h3>
+          <div id="quality-list"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <template id="diagnostic-template">
+    <div class="diagnostic-row">
+      <select class="diag-skill"></select>
+      <input class="diag-rating" type="range" min="0" max="100" value="60">
+      <span class="diag-value">60%</span>
+      <button class="btn mini danger remove-row" type="button">Remove</button>
+    </div>
+  </template>
+
+  <script src="/static/app.js" defer></script>
+</body>
+</html>
