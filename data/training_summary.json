@@ -1,0 +1,29 @@
+{
+  "total_occupations": 1016,
+  "total_skills_extracted": 0,
+  "total_knowledge_areas": 0,
+  "total_abilities": 0,
+  "technology_skills_count": 1,
+  "role_families": {
+    "management": 32,
+    "operations": 310,
+    "general": 457,
+    "technical": 187,
+    "sales": 16,
+    "customer": 14
+  },
+  "models_trained": [
+    "tfidf_vectorizer.pkl (Job descriptions)",
+    "tfidf_vectorizer_onet.pkl (O*NET occupations)",
+    "grounding_db.json (Module grounding)",
+    "skill_statistics.json (Job skill stats)"
+  ],
+  "generated_files": [
+    "data/onet_extracted_data.json",
+    "data/enhanced_skills_with_onet.json",
+    "data/occupations_with_profiles.csv",
+    "data/tfidf_vectorizer_onet.pkl",
+    "data/jobs_with_skills.csv",
+    "data/skill_statistics.json"
+  ]
+}

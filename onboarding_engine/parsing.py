@@ -13,21 +13,36 @@ def extract_text_from_bytes(filename: str, data: bytes) -> str:
     suffix = Path(filename).suffix.lower()
 
     if suffix == ".pdf":
-        from pypdf import PdfReader
-
-        reader = PdfReader(BytesIO(data))
-        pages = []
-        for page in reader.pages:
-            pages.append(page.extract_text() or "")
-        return clean_text("\n".join(pages))
+        try:
+            from pypdf import PdfReader
+            reader = PdfReader(BytesIO(data))
+            pages = []
+            for page in reader.pages:
+                pages.append(page.extract_text() or "")
+            return clean_text("\n".join(pages))
+        except ImportError:
+            print("Warning: pypdf not installed. Attempting to extract text as UTF-8 fallback.")
+            # Fallback: try to extract text from PDF as raw bytes
+            try:
+                return clean_text(data.decode("utf-8", errors="ignore"))
+            except Exception:
+                return "[PDF file uploaded but could not extract text. Please paste content as text instead.]"
 
     if suffix == ".docx":
-        from docx import Document
+        try:
+            from docx import Document
+            doc = Document(BytesIO(data))
+            paragraphs = [paragraph.text for paragraph in doc.paragraphs if paragraph.text.strip()]
+            return clean_text("\n".join(paragraphs))
+        except ImportError:
+            print("Warning: python-docx not installed. Attempting to extract text as UTF-8 fallback.")
+            # Fallback: try to extract text from DOCX as raw bytes
+            try:
+                return clean_text(data.decode("utf-8", errors="ignore"))
+            except Exception:
+                return "[DOCX file uploaded but could not extract text. Please paste content as text instead.]"
 
-        doc = Document(BytesIO(data))
-        paragraphs = [paragraph.text for paragraph in doc.paragraphs if paragraph.text.strip()]
-        return clean_text("\n".join(paragraphs))
-
+    # For .txt and other formats, try UTF-8 decoding
     try:
         return clean_text(data.decode("utf-8"))
     except UnicodeDecodeError:

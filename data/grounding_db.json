@@ -1,0 +1,434 @@
+{
+  "modules": {
+    "M001": {
+      "title": "Team Orientation and Success Criteria",
+      "skills": [
+        "communication",
+        "documentation",
+        "collaboration"
+      ],
+      "difficulty": 1,
+      "duration_hours": 2.0
+    },
+    "M010": {
+      "title": "Prioritization, Planning, and Work Management",
+      "skills": [
+        "time_management",
+        "communication",
+        "problem_solving"
+      ],
+      "difficulty": 1,
+      "duration_hours": 2.5
+    },
+    "M101": {
+      "title": "Version Control and Workspace Setup",
+      "skills": [
+        "git",
+        "linux",
+        "collaboration"
+      ],
+      "difficulty": 2,
+      "duration_hours": 3.0
+    },
+    "M102": {
+      "title": "Python Foundations for Automation",
+      "skills": [
+        "python",
+        "problem_solving"
+      ],
+      "difficulty": 2,
+      "duration_hours": 4.0
+    },
+    "M103": {
+      "title": "SQL and Data Retrieval",
+      "skills": [
+        "sql",
+        "data_analysis"
+      ],
+      "difficulty": 2,
+      "duration_hours": 3.5
+    },
+    "M104": {
+      "title": "Testing and Quality Gates",
+      "skills": [
+        "testing",
+        "documentation",
+        "problem_solving"
+      ],
+      "difficulty": 3,
+      "duration_hours": 3.0
+    },
+    "M105": {
+      "title": "API Integration Patterns",
+      "skills": [
+        "api_integration",
+        "security_basics",
+        "problem_solving"
+      ],
+      "difficulty": 3,
+      "duration_hours": 3.5
+    },
+    "M106": {
+      "title": "Cloud and Security Hygiene",
+      "skills": [
+        "cloud_basics",
+        "security_basics",
+        "linux"
+      ],
+      "difficulty": 2,
+      "duration_hours": 3.0
+    },
+    "M107": {
+      "title": "Data Analysis and Reporting",
+      "skills": [
+        "excel",
+        "data_analysis",
+        "documentation"
+      ],
+      "difficulty": 2,
+      "duration_hours": 3.0
+    },
+    "M201": {
+      "title": "Safety, Compliance, and SOP Execution",
+      "skills": [
+        "safety",
+        "process_compliance",
+        "incident_reporting"
+      ],
+      "difficulty": 1,
+      "duration_hours": 3.0
+    },
+    "M202": {
+      "title": "Equipment Handling and Preventive Checks",
+      "skills": [
+        "equipment_handling",
+        "safety",
+        "problem_solving"
+      ],
+      "difficulty": 2,
+      "duration_hours": 3.5
+    },
+    "M203": {
+      "title": "Quality Control and Root Cause Thinking",
+      "skills": [
+        "quality_control",
+        "problem_solving",
+        "documentation"
+      ],
+      "difficulty": 2,
+      "duration_hours": 3.0
+    },
+    "M204": {
+      "title": "Inventory, Shift Handover, and Scheduling",
+      "skills": [
+        "inventory_management",
+        "shift_handover",
+        "time_management"
+      ],
+      "difficulty": 2,
+      "duration_hours": 2.5
+    },
+    "M205": {
+      "title": "Customer Escalation and Service Communication",
+      "skills": [
+        "customer_service",
+        "communication",
+        "documentation"
+      ],
+      "difficulty": 2,
+      "duration_hours": 2.5
+    },
+    "M301": {
+      "title": "Continuous Improvement and Process Optimization",
+      "skills": [
+        "continuous_improvement",
+        "problem_solving",
+        "documentation"
+      ],
+      "difficulty": 3,
+      "duration_hours": 3.5
+    },
+    "M402": {
+      "title": "Technical Capstone and Competency Validation",
+      "skills": [
+        "python",
+        "sql",
+        "testing",
+        "api_integration",
+        "documentation"
+      ],
+      "difficulty": 4,
+      "duration_hours": 4.0
+    },
+    "M403": {
+      "title": "Operational Capstone and Competency Validation",
+      "skills": [
+        "safety",
+        "quality_control",
+        "customer_service",
+        "incident_reporting",
+        "documentation"
+      ],
+      "difficulty": 4,
+      "duration_hours": 4.0
+    },
+    "M404": {
+      "title": "General Capstone and Competency Validation",
+      "skills": [
+        "communication",
+        "documentation",
+        "problem_solving",
+        "time_management"
+      ],
+      "difficulty": 3,
+      "duration_hours": 3.5
+    }
+  },
+  "skills": {
+    "communication": {
+      "label": "Communication",
+      "category": "general",
+      "aliases": [
+        "stakeholder communication",
+        "written communication",
+        "verbal communication",
+        "presentation"
+      ]
+    },
+    "documentation": {
+      "label": "Documentation",
+      "category": "general",
+      "aliases": [
+        "technical writing",
+        "process documentation",
+        "report writing",
+        "sop documentation"
+      ]
+    },
+    "collaboration": {
+      "label": "Collaboration",
+      "category": "general",
+      "aliases": [
+        "teamwork",
+        "cross functional collaboration",
+        "stakeholder management"
+      ]
+    },
+    "problem_solving": {
+      "label": "Problem Solving",
+      "category": "general",
+      "aliases": [
+        "root cause analysis",
+        "troubleshooting",
+        "analytical thinking"
+      ]
+    },
+    "time_management": {
+      "label": "Time Management",
+      "category": "general",
+      "aliases": [
+        "prioritization",
+        "planning",
+        "deadline management"
+      ]
+    },
+    "python": {
+      "label": "Python",
+      "category": "technical",
+      "aliases": [
+        "python programming",
+        "python3",
+        "py"
+      ]
+    },
+    "sql": {
+      "label": "SQL",
+      "category": "technical",
+      "aliases": [
+        "structured query language",
+        "database queries",
+        "query writing"
+      ]
+    },
+    "excel": {
+      "label": "Excel",
+      "category": "technical",
+      "aliases": [
+        "spreadsheet",
+        "spreadsheets",
+        "advanced excel",
+        "pivot tables"
+      ]
+    },
+    "git": {
+      "label": "Git",
+      "category": "technical",
+      "aliases": [
+        "version control",
+        "github",
+        "git workflow"
+      ]
+    },
+    "testing": {
+      "label": "Testing",
+      "category": "technical",
+      "aliases": [
+        "unit testing",
+        "test cases",
+        "qa testing",
+        "quality gates"
+      ]
+    },
+    "api_integration": {
+      "label": "API Integration",
+      "category": "technical",
+      "aliases": [
+        "rest api",
+        "api",
+        "integration patterns",
+        "webhook"
+      ]
+    },
+    "linux": {
+      "label": "Linux",
+      "category": "technical",
+      "aliases": [
+        "command line",
+        "shell",
+        "bash",
+        "unix"
+      ]
+    },
+    "cloud_basics": {
+      "label": "Cloud Basics",
+      "category": "technical",
+      "aliases": [
+        "aws",
+        "azure",
+        "gcp",
+        "cloud computing"
+      ]
+    },
+    "security_basics": {
+      "label": "Security Basics",
+      "category": "technical",
+      "aliases": [
+        "access control",
+        "secure coding",
+        "security hygiene",
+        "least privilege"
+      ]
+    },
+    "data_analysis": {
+      "label": "Data Analysis",
+      "category": "technical",
+      "aliases": [
+        "analytics",
+        "reporting",
+        "dashboards",
+        "data interpretation"
+      ]
+    },
+    "process_compliance": {
+      "label": "Process Compliance",
+      "category": "operations",
+      "aliases": [
+        "sop",
+        "standard operating procedure",
+        "policy compliance",
+        "audit readiness"
+      ]
+    },
+    "safety": {
+      "label": "Safety",
+      "category": "operations",
+      "aliases": [
+        "workplace safety",
+        "health and safety",
+        "incident prevention"
+      ]
+    },
+    "equipment_handling": {
+      "label": "Equipment Handling",
+      "category": "operations",
+      "aliases": [
+        "machinery",
+        "tool handling",
+        "preventive checks",
+        "equipment operation"
+      ]
+    },
+    "quality_control": {
+      "label": "Quality Control",
+      "category": "operations",
+      "aliases": [
+        "inspection",
+        "defect detection",
+        "qa inspection",
+        "quality assurance"
+      ]
+    },
+    "inventory_management": {
+      "label": "Inventory Management",
+      "category": "operations",
+      "aliases": [
+        "stock control",
+        "stock management",
+        "materials tracking"
+      ]
+    },
+    "shift_handover": {
+      "label": "Shift Handover",
+      "category": "operations",
+      "aliases": [
+        "handover",
+        "shift report",
+        "transition notes"
+      ]
+    },
+    "customer_service": {
+      "label": "Customer Service",
+      "category": "operations",
+      "aliases": [
+        "customer support",
+        "escalation handling",
+        "service recovery"
+      ]
+    },
+    "incident_reporting": {
+      "label": "Incident Reporting",
+      "category": "operations",
+      "aliases": [
+        "issue logging",
+        "escalation reporting",
+        "incident log"
+      ]
+    },
+    "continuous_improvement": {
+      "label": "Continuous Improvement",
+      "category": "operations",
+      "aliases": [
+        "kaizen",
+        "process improvement",
+        "lean thinking"
+      ]
+    }
+  },
+  "job_families": {
+    "Flutter Developer": "technical",
+    "Django Developer": "technical",
+    "Machine Learning": "general",
+    "iOS Developer": "technical",
+    "Full Stack Developer": "technical",
+    "Java Developer": "technical",
+    "JavaScript Developer": "technical",
+    "DevOps Engineer": "technical",
+    "Software Engineer": "technical",
+    "Database Administrator": "general",
+    "Wordpress Developer": "technical",
+    "PHP Developer": "technical",
+    "Backend Developer": "technical",
+    "Network Administrator": "general",
+    "Node js developer": "technical"
+  }
+}

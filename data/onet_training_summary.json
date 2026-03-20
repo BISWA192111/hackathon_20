@@ -1,0 +1,24 @@
+{
+  "source": "O*NET Database 30.1",
+  "total_occupations_processed": 1016,
+  "total_unique_skills": 2,
+  "occupations_with_skills": 894,
+  "role_families": {
+    "management": 65,
+    "general": 400,
+    "technical": 213,
+    "operations": 223,
+    "sales": 17,
+    "medical": 42,
+    "customer_service": 16,
+    "education": 40
+  },
+  "models_trained": [
+    "tfidf_onet_skills.pkl"
+  ],
+  "generated_files": [
+    "data/onet_occupation_profiles.json",
+    "data/onet_skill_vocabulary.json",
+    "data/tfidf_onet_skills.pkl"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "total_skills": 2,
+  "skill_frequency": {
+    "IM": 31290,
+    "LV": 31290
+  },
+  "top_skills": [
+    {
+      "id": "IM",
+      "name": "Importance",
+      "occurrences": 31290
+    },
+    {
+      "id": "LV",
+      "name": "Level",
+      "occurrences": 31290
+    }
+  ]
+}

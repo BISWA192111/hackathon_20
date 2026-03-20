@@ -4,95 +4,175 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Adaptive Onboarding Engine</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
-  <div class="bg-orb orb-1"></div>
-  <div class="bg-orb orb-2"></div>
-  <div class="bg-grid"></div>
-
-  <main class="container">
-    <header class="hero reveal">
-      <p class="eyebrow">Hackathon Build</p>
-      <h1>AI-Adaptive Onboarding Engine</h1>
-      <p class="hero-copy">
-        Upload a resume and target JD, optionally add diagnostic self-assessment, and get a grounded personalized roadmap.
-      </p>
-      <div class="hero-actions">
-        <button id="load-tech" class="btn ghost">Load Technical Demo</button>
-        <button id="load-ops" class="btn ghost">Load Operations Demo</button>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="navbar-brand">
+        <h1 class="app-title">Adaptive Onboarding Engine</h1>
       </div>
-    </header>
-
-    <section class="panel reveal">
-      <h2>Input Workspace</h2>
-      <div class="input-grid">
-        <div class="field">
-          <label for="resume-text">Resume Text</label>
-          <textarea id="resume-text" placeholder="Paste resume text, or upload a file below"></textarea>
-        </div>
-        <div class="field">
-          <label for="jd-text">Job Description Text</label>
-          <textarea id="jd-text" placeholder="Paste target job description, or upload a file below"></textarea>
-        </div>
+      <div class="navbar-right">
+        <button class="ai-button" id="ai-chat-toggle" title="AI Assistant">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"></path>
+          </svg>
+          AI
+        </button>
+        <span class="status-badge" id="server-status">● Connected</span>
       </div>
+    </div>
+  </nav>
 
-      <div class="file-grid">
-        <div class="field compact">
-          <label for="resume-file">Resume File (PDF, DOCX, TXT)</label>
-          <input id="resume-file" type="file" accept=".pdf,.docx,.txt">
-        </div>
-        <div class="field compact">
-          <label for="jd-file">JD File (PDF, DOCX, TXT)</label>
-          <input id="jd-file" type="file" accept=".pdf,.docx,.txt">
-        </div>
-      </div>
+  <!-- AI Chat Panel -->
+  <div class="ai-chat-panel" id="ai-chat-panel">
+    <div class="ai-chat-header">
+      <h3>AI Roadmap Builder</h3>
+      <button class="ai-close-btn" id="ai-chat-close">✕</button>
+    </div>
+    <div class="ai-chat-messages" id="ai-chat-messages"></div>
+    <div class="ai-chat-input-area">
+      <input 
+        type="text" 
+        class="ai-chat-input" 
+        id="ai-chat-input" 
+        placeholder="Ask AI to enhance your roadmap, add learning tips, or adjust timeline..."
+      >
+      <button class="ai-send-btn" id="ai-send-btn">Send</button>
+    </div>
+  </div>
 
-      <div class="diagnostic-block">
-        <div class="diagnostic-header">
-          <h3>Diagnostic Self-Assessment</h3>
-          <button id="add-diagnostic" class="btn mini">Add Skill</button>
-        </div>
-        <p class="muted">Use this when resume evidence is sparse; ratings blend into the candidate profile.</p>
-        <div id="diagnostic-rows" class="diagnostic-rows"></div>
-      </div>
+  <!-- AI Chat Overlay -->
+  <div class="ai-chat-overlay" id="ai-chat-overlay"></div>
 
-      <div class="action-row">
-        <button id="analyze-btn" class="btn primary">Generate Adaptive Roadmap</button>
-        <span id="status" class="status"></span>
+  <!-- Main Content -->
+  <main class="main-container">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <h2>Personalized Learning Pathways</h2>
+        <p>Upload a resume and job description to get an AI-generated training roadmap tailored to your skill gaps</p>
       </div>
     </section>
 
-    <section class="panel reveal" id="results-section">
-      <div class="panel-head">
-        <h2>Analysis Output</h2>
-        <span id="family-pill" class="pill">Role: -</span>
-      </div>
-      <div id="metrics" class="metrics"></div>
-
-      <div class="result-grid">
-        <div class="card">
-          <h3>Skill Gaps</h3>
-          <div id="gap-table"></div>
-        </div>
-        <div class="card">
-          <h3>Learning Roadmap</h3>
-          <div id="roadmap-list"></div>
-        </div>
+    <!-- Input Section -->
+    <section class="input-section">
+      <div class="section-header">
+        <h3>Step 1: Upload Documents</h3>
+        <p class="section-subtitle">Provide your resume and target job description</p>
       </div>
 
-      <div class="result-grid">
-        <div class="card">
-          <h3>Reasoning Trace</h3>
-          <div id="trace-list"></div>
+      <div class="input-container">
+        <!-- Resume Section -->
+        <div class="input-card">
+          <h4>Resume</h4>
+          <div class="file-upload-area" id="resume-upload-area">
+            <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="17 8 12 3 7 8"></polyline>
+              <line x1="12" y1="3" x2="12" y2="15"></line>
+            </svg>
+            <p>Drag & drop or click to upload</p>
+            <small>PDF, DOCX, or TXT (max 5MB)</small>
+            <input type="file" id="resume-file" accept=".pdf,.docx,.txt" style="display:none;">
+          </div>
+          <textarea id="resume-text" class="text-input" placeholder="Or paste resume text here..."></textarea>
         </div>
-        <div class="card">
-          <h3>Grounding Checks</h3>
-          <div id="quality-list"></div>
+
+        <!-- Job Description Section -->
+        <div class="input-card">
+          <h4>Job Description</h4>
+          <div class="file-upload-area" id="jd-upload-area">
+            <svg class="upload-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="17 8 12 3 7 8"></polyline>
+              <line x1="12" y1="3" x2="12" y2="15"></line>
+            </svg>
+            <p>Drag & drop or click to upload</p>
+            <small>PDF, DOCX, or TXT (max 5MB)</small>
+            <input type="file" id="jd-file" accept=".pdf,.docx,.txt" style="display:none;">
+          </div>
+          <textarea id="jd-text" class="text-input" placeholder="Or paste job description here..."></textarea>
         </div>
+      </div>
+
+      <!-- Demo Buttons -->
+      <div class="demo-section">
+        <p class="demo-label">Try Demo Data:</p>
+        <button class="btn btn-secondary" id="load-tech">Technical Role Demo</button>
+        <button class="btn btn-secondary" id="load-ops">Operations Role Demo</button>
+      </div>
+
+      <!-- Action Button -->
+      <div class="action-section">
+        <button class="btn btn-primary" id="analyze-btn">Generate Learning Roadmap</button>
+        <div class="status-message" id="status"></div>
+      </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="results-section" id="results-section">
+      <div class="results-header">
+        <h2>Your Learning Roadmap</h2>
+        <span id="family-pill" class="role-badge">Role Family: -</span>
+      </div>
+      <!-- Metrics Dashboard -->
+      <div class="metrics-grid" id="metrics"></div>
+
+      <!-- Skill Gaps -->
+      <section class="results-card">
+        <div class="card-header">
+          <h3>Skill Gaps Analysis</h3>
+          <p class="card-subtitle">Skills needed to bridge the gap</p>
+        </div>
+        <div id="gap-table" class="gap-table"></div>
+      </section>
+
+      <!-- Learning Roadmap -->
+      <section class="results-card">
+        <div class="card-header">
+          <h3>Personalized Learning Roadmap</h3>
+          <p class="card-subtitle">Recommended training sequence</p>
+        </div>
+        <div id="roadmap-list" class="roadmap-list"></div>
+      </section>
+
+      <!-- Metrics & Insights Row -->
+      <div class="insights-row">
+        <section class="results-card half-width">
+          <div class="card-header">
+            <h3>Advanced Metrics</h3>
+          </div>
+          <div id="advanced-metrics" class="metrics-content"></div>
+        </section>
+
+        <section class="results-card half-width">
+          <div class="card-header">
+            <h3>Market and Career Insights</h3>
+          </div>
+          <div id="market-insights" class="market-content"></div>
+        </section>
+      </div>
+
+      <!-- Quality Assurance -->
+      <div class="quality-row">
+        <section class="results-card half-width">
+          <div class="card-header">
+            <h3>Reasoning Trace</h3>
+            <p class="card-subtitle">How the roadmap was generated</p>
+          </div>
+          <div id="trace-list" class="trace-list"></div>
+        </section>
+
+        <section class="results-card half-width">
+          <div class="card-header">
+            <h3>Quality Checks</h3>
+            <p class="card-subtitle">Grounding verification results</p>
+          </div>
+          <div id="quality-list" class="quality-list"></div>
+        </section>
       </div>
     </section>
   </main>

@@ -1,0 +1,302 @@
+[
+  {
+    "skill_id": "communication",
+    "label": "Communication",
+    "category": "general",
+    "aliases": [
+      "stakeholder communication",
+      "written communication",
+      "verbal communication",
+      "presentation"
+    ],
+    "onet_reference": null,
+    "frequency": 0
+  },
+  {
+    "skill_id": "documentation",
+    "label": "Documentation",
+    "category": "general",
+    "aliases": [
+      "technical writing",
+      "process documentation",
+      "report writing",
+      "sop documentation"
+    ],
+    "onet_reference": null,
+    "frequency": 0
+  },
+  {
+    "skill_id": "collaboration",
+    "label": "Collaboration",
+    "category": "general",
+    "aliases": [
+      "teamwork",
+      "cross functional collaboration",
+      "stakeholder management"
+    ],
+    "onet_reference": null,
+    "frequency": 0
+  },
+  {
+    "skill_id": "problem_solving",
+    "label": "Problem Solving",
+    "category": "general",
+    "aliases": [
+      "root cause analysis",
+      "troubleshooting",
+      "analytical thinking"
+    ],
+    "onet_reference": null,
+    "frequency": 0
+  },
+  {
+    "skill_id": "time_management",
+    "label": "Time Management",
+    "category": "general",
+    "aliases": [
+      "prioritization",
+      "planning",
+      "deadline management"
+    ],
+    "onet_reference": null,
+    "frequency": 0
+  },
+  {
+    "skill_id": "python",
+    "label": "Python",
+    "category": "technical",
+    "aliases": [
+      "python programming",
+      "python3",
+      "py"
+    ],
+    "onet_reference": null,
+    "frequency": 0
+  },
+  {
+    "skill_id": "sql",
+    "label": "SQL",
+    "category": "technical",
+    "aliases": [
+      "structured query language",
+      "database queries",
+      "query writing"
+    ],
+    "onet_reference": null,
+    "frequency": 0
+  },
+  {
+    "skill_id": "excel",
+    "label": "Excel",
+    "category": "technical",
+    "aliases": [
+      "spreadsheet",
+      "spreadsheets",
+      "advanced excel",
+      "pivot tables"
+    ],
+    "onet_reference": null,
+    "frequency": 0
+  },
+  {
+    "skill_id": "git",
+    "label": "Git",
+    "category": "technical",
+    "aliases": [
+      "version control",
+      "github",
+      "git workflow"
+    ],
+    "onet_reference": null,
+    "frequency": 0
+  },
+  {
+    "skill_id": "testing",
+    "label": "Testing",
+    "category": "technical",
+    "aliases": [
+      "unit testing",
+      "test cases",
+      "qa testing",
+      "quality gates"
+    ],
+    "onet_reference": null,
+    "frequency": 0
+  },
+  {
+    "skill_id": "api_integration",
+    "label": "API Integration",
+    "category": "technical",
+    "aliases": [
+      "rest api",
+      "api",
+      "integration patterns",
+      "webhook"
+    ],
+    "onet_reference": null,
+    "frequency": 0
+  },
+  {
+    "skill_id": "linux",
+    "label": "Linux",
+    "category": "technical",
+    "aliases": [
+      "command line",
+      "shell",
+      "bash",
+      "unix"
+    ],
+    "onet_reference": null,
+    "frequency": 0
+  },
+  {
+    "skill_id": "cloud_basics",
+    "label": "Cloud Basics",
+    "category": "technical",
+    "aliases": [
+      "aws",
+      "azure",
+      "gcp",
+      "cloud computing"
+    ],
+    "onet_reference": null,
+    "frequency": 0
+  },
+  {
+    "skill_id": "security_basics",
+    "label": "Security Basics",
+    "category": "technical",
+    "aliases": [
+      "access control",
+      "secure coding",
+      "security hygiene",
+      "least privilege"
+    ],
+    "onet_reference": null,
+    "frequency": 0
+  },
+  {
+    "skill_id": "data_analysis",
+    "label": "Data Analysis",
+    "category": "technical",
+    "aliases": [
+      "analytics",
+      "reporting",
+      "dashboards",
+      "data interpretation"
+    ],
+    "onet_reference": null,
+    "frequency": 0
+  },
+  {
+    "skill_id": "process_compliance",
+    "label": "Process Compliance",
+    "category": "operations",
+    "aliases": [
+      "sop",
+      "standard operating procedure",
+      "policy compliance",
+      "audit readiness"
+    ],
+    "onet_reference": null,
+    "frequency": 0
+  },
+  {
+    "skill_id": "safety",
+    "label": "Safety",
+    "category": "operations",
+    "aliases": [
+      "workplace safety",
+      "health and safety",
+      "incident prevention"
+    ],
+    "onet_reference": null,
+    "frequency": 0
+  },
+  {
+    "skill_id": "equipment_handling",
+    "label": "Equipment Handling",
+    "category": "operations",
+    "aliases": [
+      "machinery",
+      "tool handling",
+      "preventive checks",
+      "equipment operation"
+    ],
+    "onet_reference": null,
+    "frequency": 0
+  },
+  {
+    "skill_id": "quality_control",
+    "label": "Quality Control",
+    "category": "operations",
+    "aliases": [
+      "inspection",
+      "defect detection",
+      "qa inspection",
+      "quality assurance"
+    ],
+    "onet_reference": null,
+    "frequency": 0
+  },
+  {
+    "skill_id": "inventory_management",
+    "label": "Inventory Management",
+    "category": "operations",
+    "aliases": [
+      "stock control",
+      "stock management",
+      "materials tracking"
+    ],
+    "onet_reference": null,
+    "frequency": 0
+  },
+  {
+    "skill_id": "shift_handover",
+    "label": "Shift Handover",
+    "category": "operations",
+    "aliases": [
+      "handover",
+      "shift report",
+      "transition notes"
+    ],
+    "onet_reference": null,
+    "frequency": 0
+  },
+  {
+    "skill_id": "customer_service",
+    "label": "Customer Service",
+    "category": "operations",
+    "aliases": [
+      "customer support",
+      "escalation handling",
+      "service recovery"
+    ],
+    "onet_reference": null,
+    "frequency": 0
+  },
+  {
+    "skill_id": "incident_reporting",
+    "label": "Incident Reporting",
+    "category": "operations",
+    "aliases": [
+      "issue logging",
+      "escalation reporting",
+      "incident log"
+    ],
+    "onet_reference": null,
+    "frequency": 0
+  },
+  {
+    "skill_id": "continuous_improvement",
+    "label": "Continuous Improvement",
+    "category": "operations",
+    "aliases": [
+      "kaizen",
+      "process improvement",
+      "lean thinking"
+    ],
+    "onet_reference": null,
+    "frequency": 0
+  }
+]

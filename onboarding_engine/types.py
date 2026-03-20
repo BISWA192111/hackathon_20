@@ -55,6 +55,8 @@ class RoadmapStep:
     readiness_score: float
     demand_score: float
     similarity_score: float
+    priority_score: float
+    learning_mode: str
     prerequisites: List[str]
 
 
