@@ -1,7 +1,4 @@
 {
-  "buildCommand": "echo 'Build in Docker'",
-  "framework": "other",
-  "outputDirectory": ".",
   "regions": ["iad1"],
   "env": {
     "PYTHONDONTWRITEBYTECODE": "1",
