@@ -1,0 +1,11 @@
+{
+  "buildCommand": "echo 'Build in Docker'",
+  "framework": "other",
+  "outputDirectory": ".",
+  "regions": ["iad1"],
+  "env": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "PYTHONUNBUFFERED": "1",
+    "SUPABASE_RUNS_TABLE": "onboarding_runs"
+  }
+}
