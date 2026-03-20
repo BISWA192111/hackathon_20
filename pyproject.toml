@@ -1,0 +1,27 @@
+[tool.vercel]
+framework = "fastapi"
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hackathon"
+version = "0.1.0"
+description = "Hackathon onboarding intelligence platform"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.110,<0.112",
+    "uvicorn>=0.29,<0.31",
+    "python-multipart>=0.0.9,<0.1",
+    "pypdf>=4.3,<5.0",
+    "python-docx>=1.1,<2.0",
+    "pandas>=2.2,<3.0",
+    "scikit-learn>=1.5,<2.0",
+    "fuzzywuzzy>=0.18,<0.19",
+    "supabase>=2.9,<3.0",
+    "python-dotenv>=1.0,<2.0",
+]
+
+[project.scripts]
+app = "backend.main:app"
