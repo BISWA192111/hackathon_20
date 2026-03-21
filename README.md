@@ -1,8 +1,8 @@
-# 🎓 AI-Adaptive Onboarding Engine
+#  AI-Adaptive Onboarding Engine
 
 A full-stack, deterministic onboarding system that generates personalized learning roadmaps by analyzing resume + job description and extracting skill gaps. **No external LLMs in the critical path** — all recommendations are grounded in a curated course catalog.
 
-## 🎯 Key Features
+##  Key Features
 
 ### Intelligent Skill Extraction
 - **Resume/JD Parsing**: PDF, DOCX, TXT file support with graceful fallbacks
@@ -92,7 +92,7 @@ A full-stack, deterministic onboarding system that generates personalized learni
    - `onet_occupation_profiles.json`: Optional O*NET enrichment
    - `skill_statistics.json`: Job market frequency data
 
-## 🧠 Algorithms & Training
+##  Algorithms & Training
 
 ### Skill Extraction
 - **Method**: Alias-based matching with multi-factor scoring
@@ -131,14 +131,14 @@ FOR EACH iteration (max 10):
 3. **Text Processing**: TF-IDF vectorizer for module-JD similarity
 
 ### Quality Assurance
-- ✅ **Hallucination Prevention**: Only recommends catalog modules
-- ✅ **Dependency Validation**: Topological ordering respects prerequisites
-- ✅ **Reasoning Trace**: Every decision logged with confidence & evidence
-- ✅ **Role Filtering**: Modules must match audience tags
+-  **Hallucination Prevention**: Only recommends catalog modules
+-  **Dependency Validation**: Topological ordering respects prerequisites
+-  **Reasoning Trace**: Every decision logged with confidence & evidence
+-  **Role Filtering**: Modules must match audience tags
 
 **For detailed algorithm documentation, see** [ALGORITHMS_AND_TRAINING.md](ALGORITHMS_AND_TRAINING.md)
 
-## 🚀 Run Locally
+##  Run Locally
 
 ### Prerequisites
 - Python 3.8+
@@ -211,7 +211,7 @@ http://localhost:8000
 5. **View Results**: See skill gaps, learning roadmap, metrics, and reasoning
 6. **Ask AI**: Open AI chat to ask questions about the roadmap
 
-## 🐳 Docker
+##  Docker
 
 ```bash
 docker build -t adaptive-onboarding .
@@ -222,7 +222,7 @@ docker run -p 8000:8000 \
   adaptive-onboarding
 ```
 
-## 🐳 Docker
+##  Docker
 
 ```bash
 # Build image
@@ -236,7 +236,7 @@ docker run -p 8000:8000 \
   adaptive-onboarding
 ```
 
-## 📡 API Endpoints
+##  API Endpoints
 
 ### Health & Config
 - `GET /api/v1/health` - Server status
@@ -260,7 +260,7 @@ docker run -p 8000:8000 \
 - `GET /api/v1/runs/{run_id}` - Retrieve specific analysis
 - `POST /api/v1/runs/compare` - Compare two analyses
 
-## 📋 Request/Response Examples
+##  Request/Response Examples
 
 ### Text Analysis Request
 ```json
@@ -327,7 +327,7 @@ diagnostic_json: [{"skill_id": "python", ...}] (optional)
 }
 ```
 
-## ⚙️ Configuration
+##  Configuration
 
 ### Environment Variables
 
@@ -342,7 +342,7 @@ diagnostic_json: [{"skill_id": "python", ...}] (optional)
 
 **Note**: Azure OpenAI is optional. If unavailable, assistant uses deterministic fallback responses.
 
-## 🐛 Troubleshooting
+##  Troubleshooting
 
 ### "ModuleNotFoundError: No module named 'pypdf'"
 → Run: `pip install -r requirements.txt` or `pip install pypdf`
@@ -365,7 +365,7 @@ diagnostic_json: [{"skill_id": "python", ...}] (optional)
 → Check if Azure OpenAI is configured (optional)  
 → System falls back to deterministic responses if Azure unavailable
 
-## 📊 Performance Notes
+##  Performance Notes
 
 - **Skill Extraction**: ~100-500ms per resume (depends on length)
 - **Adaptive Pathing**: ~50-200ms (graph algorithms)
@@ -374,7 +374,7 @@ diagnostic_json: [{"skill_id": "python", ...}] (optional)
 
 TF-IDF vectorization is the bottleneck when computing module-JD similarity.
 
-## 📚 Documentation
+##  Documentation
 
 - [ALGORITHMS_AND_TRAINING.md](ALGORITHMS_AND_TRAINING.md) - Deep dive into algorithms
 - [presentation_outline.md](presentation_outline.md) - 5-slide presentation deck
@@ -387,7 +387,4 @@ TF-IDF vectorization is the bottleneck when computing module-JD similarity.
 - **ML**: scikit-learn (BSD License)
 - **Web Framework**: FastAPI (MIT License)
 
-## 👥 Team & Hackathon
 
-**Hackathon@IISC** - Practical AI for workforce onboarding  
-Built March 2026
